@@ -28,7 +28,6 @@ export default function Player({
         type="text"
         value={playerName}
         onChange={handleNameChange}
-        onBlur={handleEditClick}
         required
       />
     );
@@ -40,9 +39,7 @@ export default function Player({
         {editablePlayerName}
         <span className="player-symbol">{playerSymbol}</span>
       </span>
-      <button onClick={handleEditClick} onBlur={handleEditClick}>
-        {isEditing ? "Save" : "Edit"}
-      </button>
+      <button onClick={handleEditClick}>{isEditing ? "Save" : "Edit"}</button>
     </li>
   );
 }
